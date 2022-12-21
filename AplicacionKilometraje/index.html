@@ -6,37 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <title>AngularJS</title>
+    <link rel="stylesheet" href="./css/estilos.css">
   </head>
   <body>
     <div ng-app="MyApp" ng-controller="formCtrl">
       <form action="">
-        <label>Nombre: </label>
-        <input type="text" ng-model="nombre" placeholder="Escribe tu nombre">
-        
-        <label>Apellido: </label>
-        <input type="text" ng-model="Apellido" placeholder="Escribe tu apellido">
-
-        <label>Kilometraje: </label>
-        <input type="text" ng-model="kilome" placeholder="Cuantos kilometros recorres">
+        <section class="formulario">
+          <label>Nombre: </label>
+          <input type="text" ng-model="nombre" placeholder="Escribe tu nombre">
+          
+          <label>Apellido: </label>
+          <input type="text" ng-model="Apellido" placeholder="Escribe tu apellido">
+  
+          <label>Kilometraje: </label>
+          <input type="text" ng-model="kilome" placeholder="Cuantos kilometros recorres">
+        </section>
       </form>
 
       
-
-      <h3>La boleta del kilometraje</h3>
-      <p>Nombre: {{nombre}}</p>
-      <p>Apellido: {{Apellido}}</p>
-      <p>Kilometraje: {{kilome}}</p>
-      <p>Tarifa: {{tarifa(kilome)}}</p>
+      <section class="contenido">
+        <h3>La boleta del kilometraje</h3>
+        <p>Nombre: {{nombre}}</p>
+        <p>Apellido: {{Apellido}}</p>
+        <p>Kilometraje: {{kilome}}</p>
+        <p>Tarifa: {{tarifa(kilome)}}</p>
+      </section>
     </div>
     <script src="./js/app.js"></script>
   </body>
   </html>
   
-  <!-- <form novalidate>
-    Distancia:<br />
-    <input type="text" ng-model="distancia" /><br />
-    <button ng-click="Tarifa()">Tarifa</button>
-  </form>
-  <p >Distancia = {{ distancia }}</p>
-  <p>Tarifa = {{ tarifa }}</p>
-  <p>descuento = {{ descuento }}</p> -->
